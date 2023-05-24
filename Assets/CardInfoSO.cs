@@ -11,6 +11,8 @@ public class CardInfo
     public string cardName;
     [TextArea(2, 10)]
     public string description;
+
+    public CardAction[] actions;
 }
 [CreateAssetMenu(menuName = "Card Info")]
 public class CardInfoSO : ScriptableObject

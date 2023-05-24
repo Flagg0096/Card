@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,9 @@ public class FieldManager : MonoBehaviour
     public float cardGap = 2.5f;
     List<Card> handsCard = new List<Card>();
     List<int> hands;
+
+ 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,13 +51,27 @@ public class FieldManager : MonoBehaviour
         {
             Vector3 position = startPos + Vector3.right * cardGap * i;
             Card card = Instantiate(cardPrefab, position, Quaternion.identity).GetComponent<Card>();
+            card.index = i;
             card.cardInfo = cardInfoSO.GetCardInfo(hands[i]);
+            AddCardBehaviour(card);
             handsCard.Add(card);
         }
     }
 
-    public void DiscardHand(Card card)
+    private void AddCardBehaviour(Card card)
     {
-        deckManager.DiscardHand(handsCard.IndexOf(card));
+        CardBehaviour cardBehaviour = card.gameObject.AddComponent<CardBehaviour>();
+        cardBehaviour.cardInfo = card.cardInfo;
+        card.cardBehaviour = cardBehaviour;
+
+        if (this.TryGetComponent(out CostManager costManager))
+        {
+            cardBehaviour.costManager = costManager;
+        }
+    }
+
+    public void DiscardHand(int index)
+    {
+        deckManager.DiscardHand(index);
     }
 }

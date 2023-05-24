@@ -5,9 +5,11 @@ using TMPro;
 
 public class Card : MonoBehaviour
 {
+    public int index;
     FieldManager fieldManager;
     public CardInfo cardInfo;
-    public TextMeshProUGUI title, description;
+    public TextMeshPro title, description;
+    public CardBehaviour cardBehaviour;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,14 +22,21 @@ public class Card : MonoBehaviour
     }
     public virtual void Activate()
     {
-        fieldManager.DiscardHand(this);
+        if (!cardBehaviour.CanUse())
+        {
+            return;
+        }
+
+        cardBehaviour.Use();
+        fieldManager.DiscardHand(index);
+
     }
 
     public void UpdateCard()
     {
         if (cardInfo != null)
         {
-            title.text = cardInfo.cardName;
+            title.text = $"{cardInfo.cardName} [{cardInfo.cost}]";
             description.text = cardInfo.description;
         }
         else

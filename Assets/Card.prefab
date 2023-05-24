@@ -134,6 +134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardInfo:
     id: 0
+    rank: 0
+    cost: 0
     cardName: 
     description: 
   title: {fileID: 7553944136769752462}

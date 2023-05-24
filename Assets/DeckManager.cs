@@ -8,6 +8,16 @@ public class DeckManager : MonoBehaviour
 {
     public CardStack deck, hands, discard;
     public UnityAction onHandsChange;
+
+    private void OnEnable() 
+    {
+        hands.onChange += HandsChanged;
+    }
+
+    private void OnDisable() 
+    {
+        hands.onChange -= HandsChanged;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -27,13 +37,14 @@ public class DeckManager : MonoBehaviour
 
     public void DiscardHand()
     {
-        for (int i = 0; i < hands.cards.Count; i++)
-        {
-            DiscardHand(0);
-        }
+        discard.AddCard(hands.cards);
+        hands.RemoveAllCard();
+
+        HandsChanged();
     }
     public void DiscardHand(int index)
     {
+        Debug.Log(index);
         discard.AddCard(hands.cards[index]);
         hands.RemoveCardAt(index);
 

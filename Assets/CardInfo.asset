@@ -18,88 +18,108 @@ MonoBehaviour:
     cost: 1
     cardName: "\u5F00\u53D1"
     description: "\u8FDB\u5EA6+1\uFF0C\u5728\u624B\u724C\u4E2D\u6DFB\u52A01\u5F20\u300Cbug\u300D"
+    actions:
+    - {fileID: 11400000, guid: b4290f15c4b855b4088051fbab43ca0d, type: 2}
+    - {fileID: 11400000, guid: 19b7cb8b11da75a40a0d2e13cf3e28a4, type: 2}
   - id: 2
     rank: 1
     cost: 1
     cardName: "\u4FEE\u590D"
     description: "\u79FB\u9664\u624B\u724C\u4E2D\u7684\u4E00\u5F20\u300Cbug\u300D"
+    actions: []
   - id: 3
     rank: 1
     cost: 1
     cardName: "\u521D\u7EA7\u4EBA\u529B"
     description: "\u53EF\u5728\u968F\u673A\u7684\u4E09\u5F20\u4E00\u9636\u724C\u4E2D\u9009\u62E9\u4E00\u5F20\u52A0\u5165\u624B\u724C"
+    actions: []
   - id: 4
     rank: 1
     cost: 2
     cardName: BOSS
     description: "\u79FB\u9664\u4E00\u5F20\u624B\u5361\uFF0C\u4E0D\u53EF\u79FB\u9664bug"
+    actions: []
   - id: 5
     rank: 1
     cost: 1
     cardName: "\u4E2D\u7EA7\u4EBA\u529B"
     description: "\u5728\u968F\u673A\u76843\u5F20\u4E8C\u9636\u724C\u4E2D\u9009\u62E91\u5F20\u52A0\u5165\u624B\u724C"
+    actions: []
   - id: 6
     rank: 1
     cost: 0
     cardName: "\u52A0\u73ED"
     description: "\u8D39\u7528+2\r"
+    actions: []
   - id: 7
     rank: 2
     cost: 1
     cardName: "\u9700\u6C42\u8BC4\u5BA1"
     description: "\u4ECE\u5361\u7EC4\u4E2D\u62BD2\u5F20\u724C"
+    actions: []
   - id: 8
     rank: 2
     cost: 1
     cardName: "\u6280\u672F\u8BC4\u5BA1 "
     description: "\u672C\u56DE\u5408\u6253\u51FA\u7684\u5F00\u53D1\u724C\uFF0C\u8FDB\u5EA6\u989D\u5916+1\r"
+    actions: []
   - id: 9
     rank: 2
     cost: 1
     cardName: "\u5355\u5143\u6D4B\u8BD5 "
     description: "\u672C\u56DE\u5408\u6253\u51FA\u7684\u5F00\u53D1\u724C\uFF0C\u5C11\u4EA7\u751F1\u4E2Abug\r"
+    actions: []
   - id: 10
     rank: 2
     cost: 1
     cardName: "\u7ED3\u5BF9\u7F16\u7A0B "
     description: "\u4E0B\u4E00\u5F20\u724C\u7684\u8FDB\u5EA6x2\r"
+    actions: []
   - id: 11
     rank: 2
     cost: 1
     cardName: "\u7ACB\u5373\u63D0\u4EA4"
     description: "\u5C06\u624B\u724C\u4E2D\u7684\u5168\u90E8bug\u724C\u5F03\u7F6E\uFF0C\u5E76\u62BD\u7B49\u91CF\u7684\u5361\r"
+    actions: []
   - id: 12
     rank: 2
     cost: 1
     cardName: "\u9AD8\u7EA7\u4EBA\u529B "
     description: "\u5728\u968F\u673A\u76843\u5F20\u4E09\u9636\u724C\u4E2D\u9009\u62E9\u4E00\u5F20\u52A0\u5165\u624B\u724C\r"
+    actions: []
   - id: 13
     rank: 3
     cost: 1
     cardName: "\u91CD\u6784"
     description: "\u4ECE\u5361\u7EC4\u3001\u5F03\u724C\u5806\u4E2D\u79FB\u96641\u5F20bug\r"
+    actions: []
   - id: 14
     rank: 3
     cost: 1
     cardName: "\u547D\u8FD0\u62BD\u5361"
     description: "\u9009\u62E9\u5F03\u724C\u5806\u4E2D\u7684\u4E00\u5F20\u5361\uFF0C\u5C06\u5176\u79FB\u52A8\u5230\u5361\u7EC4\u9876\u7AEF\r"
+    actions: []
   - id: 15
     rank: 3
     cost: 0
     cardName: "\u53CD\u5411\u4F18\u5316 "
     description: "\u8FDB\u5EA6-1\uFF0C\u4ECE\u5F03\u724C\u5806\u3001\u5361\u7EC4\u4E2D\u79FB\u96642\u5F20bug\r"
+    actions: []
   - id: 16
     rank: 3
     cost: 1
     cardName: "\u4E34\u65F6\u7248\u672C "
     description: "\u4ECE\u5361\u7EC4\u4E2D\u62BD\u5361\uFF0C\u76F4\u5230\u624B\u724C\u8FBE\u52305\u5F20\r"
-  - id: 1
+    actions: []
+  - id: 17
     rank: 0
-    cost: 0
+    cost: 99
     cardName: bug
     description: "\u4E0D\u53EF\u6253\u51FA"
-  - id: 2
+    actions: []
+  - id: 18
     rank: 0
     cost: 0
     cardName: "\u4E25\u91CDbug"
     description: "\u4E0D\u53EF\u6253\u51FA\uFF0C\u8FDB\u5165\u5F03\u724C\u5806\u65F6\u8FDB\u5EA6-1"
+    actions: []
