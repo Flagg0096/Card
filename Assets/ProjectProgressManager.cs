@@ -3,9 +3,18 @@ using TMPro;
 
 public class ProjectProgressManager : MonoBehaviour 
 {
+    public UINumberBar numberBar;
     public ProjectProgress projectProgress;
-    public TextMeshProUGUI text;
+    
+    private void OnEnable()
+    {
+        numberBar.inputField.onValueChanged.AddListener(delegate { SetProgress(numberBar.value); });
+    }
 
+    private void OnDisable()
+    {
+        numberBar.inputField.onValueChanged.RemoveListener(delegate { SetProgress(numberBar.value); });
+    }
 
     private void Start() 
     {
@@ -14,7 +23,12 @@ public class ProjectProgressManager : MonoBehaviour
 
     private void Update()
     {
-        text.text = $"进度： {projectProgress.Value}";
+        numberBar.SetValue(projectProgress.Value);
+    }
+
+    void SetProgress(int value)
+    {
+        projectProgress.Value = value;
     }
 }
 

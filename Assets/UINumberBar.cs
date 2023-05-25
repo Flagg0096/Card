@@ -9,15 +9,13 @@ public class UINumberBar : MonoBehaviour
     public TMP_InputField inputField;
     public int value;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         inputField.onValueChanged.AddListener(delegate { ChangeValue(); });
     }
-
-    // Update is called once per frame
-    void Update()
+    void OnDisable()
     {
-        ChangeValue();
+        inputField.onValueChanged.AddListener(delegate { ChangeValue(); });
     }
 
     private void ChangeValue()
@@ -27,6 +25,12 @@ public class UINumberBar : MonoBehaviour
         {
             value = result;
         }
+    }
+
+    public void SetValue(int value)
+    {
+        this.value = value;
+        UpdateValue();
     }
 
     public void Plus()

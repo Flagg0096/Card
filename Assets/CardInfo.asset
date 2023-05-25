@@ -26,13 +26,15 @@ MonoBehaviour:
     cost: 1
     cardName: "\u4FEE\u590D"
     description: "\u79FB\u9664\u624B\u724C\u4E2D\u7684\u4E00\u5F20\u300Cbug\u300D"
-    actions: []
+    actions:
+    - {fileID: 11400000, guid: e95c0f3a56dca064dbe3738c8c5f8b90, type: 2}
   - id: 3
     rank: 1
     cost: 1
     cardName: "\u521D\u7EA7\u4EBA\u529B"
     description: "\u53EF\u5728\u968F\u673A\u7684\u4E09\u5F20\u4E00\u9636\u724C\u4E2D\u9009\u62E9\u4E00\u5F20\u52A0\u5165\u624B\u724C"
-    actions: []
+    actions:
+    - {fileID: 11400000, guid: f2c9da414b06c274a87fc7e8238289e1, type: 2}
   - id: 4
     rank: 1
     cost: 2
@@ -44,13 +46,15 @@ MonoBehaviour:
     cost: 1
     cardName: "\u4E2D\u7EA7\u4EBA\u529B"
     description: "\u5728\u968F\u673A\u76843\u5F20\u4E8C\u9636\u724C\u4E2D\u9009\u62E91\u5F20\u52A0\u5165\u624B\u724C"
-    actions: []
+    actions:
+    - {fileID: 11400000, guid: f36c2e162b1bb7a47a29320dec2d30d2, type: 2}
   - id: 6
     rank: 1
     cost: 0
     cardName: "\u52A0\u73ED"
     description: "\u8D39\u7528+2\r"
-    actions: []
+    actions:
+    - {fileID: 11400000, guid: ed7640ebb0054ad418a4bb278af4ec57, type: 2}
   - id: 7
     rank: 2
     cost: 1
@@ -86,7 +90,8 @@ MonoBehaviour:
     cost: 1
     cardName: "\u9AD8\u7EA7\u4EBA\u529B "
     description: "\u5728\u968F\u673A\u76843\u5F20\u4E09\u9636\u724C\u4E2D\u9009\u62E9\u4E00\u5F20\u52A0\u5165\u624B\u724C\r"
-    actions: []
+    actions:
+    - {fileID: 11400000, guid: 1432410052fd46a4cb44a01d5f249255, type: 2}
   - id: 13
     rank: 3
     cost: 1

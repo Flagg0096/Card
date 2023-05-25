@@ -9,12 +9,12 @@ public class DeckManager : MonoBehaviour
     public CardStack deck, hands, discard;
     public UnityAction onHandsChange;
 
-    private void OnEnable() 
+    private void OnEnable()
     {
         hands.onChange += HandsChanged;
     }
 
-    private void OnDisable() 
+    private void OnDisable()
     {
         hands.onChange -= HandsChanged;
     }
@@ -53,7 +53,8 @@ public class DeckManager : MonoBehaviour
 
     private void HandsChanged()
     {
-        onHandsChange.Invoke();
+        if (onHandsChange != null)
+            onHandsChange.Invoke();
     }
 
     public void DrawCard()

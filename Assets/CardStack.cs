@@ -42,4 +42,9 @@ public class CardStack
         if (onChange != null)
             onChange.Invoke();
     }
+
+    internal void RemoveCard(int id)
+    {
+        cards.Remove(id);
+    }
 }

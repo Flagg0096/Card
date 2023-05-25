@@ -49,6 +49,7 @@ public class UIAddCardMenu : UIPopUpMenu
 
         Button button = addCardButton.GetComponent<Button>();
         button.onClick.AddListener(() => deckManager.AddCardtoHand(cardInfo.id));
+        button.onClick.AddListener(HideMenu);
 
         TextMeshProUGUI text = button.GetComponentInChildren<TextMeshProUGUI>();
         text.text = cardInfo.cardName + "：" + cardInfo.description;

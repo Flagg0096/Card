@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     RaycastHit hit;
     Card selectedCard, targetCard;
+    public int drawAmount;
+
     // Start is called before the first frame update
     void Start()
     {

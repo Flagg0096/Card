@@ -6,9 +6,8 @@ using UnityEngine;
 
 public class CostManager : MonoBehaviour
 {
-    public TextMeshProUGUI costText;
+    public UINumberBar numberBar;
     public int initCost = 3;
-
     private int remainCost;
 
     internal bool CanUse(int cost)
@@ -24,12 +23,13 @@ public class CostManager : MonoBehaviour
     private void OnEnable()
     {
         TurnManager.turnEndEvent += OnTurnEndEvent;
+        numberBar.inputField.onValueChanged.AddListener(delegate { SetCost(numberBar.value); });
     }
 
     private void OnDisable()
     {
         TurnManager.turnEndEvent -= OnTurnEndEvent;
-
+        numberBar.inputField.onValueChanged.RemoveListener(delegate { SetCost(numberBar.value); });
     }
 
     // Start is called before the first frame update
@@ -41,7 +41,12 @@ public class CostManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        costText.text = "费用" + remainCost.ToString();
+        numberBar.SetValue(remainCost);
+    }
+
+    void SetCost(int value)
+    {
+        remainCost = value;
     }
 
     [ContextMenu("ResetCost")]
@@ -54,5 +59,10 @@ public class CostManager : MonoBehaviour
     private void OnTurnEndEvent()
     {
         ResetCost();
+    }
+
+    public void AddCost(int value)
+    {
+        remainCost += value;
     }
 }

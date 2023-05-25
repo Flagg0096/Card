@@ -7,8 +7,8 @@ using TMPro;
 
 public class TurnManager : MonoBehaviour
 {
+    public UINumberBar numberBar;
     public static event Action turnEndEvent;
-    public TextMeshProUGUI turnText;
     public int turn = 1;
     public Button endTurnButton;
 
@@ -16,11 +16,18 @@ public class TurnManager : MonoBehaviour
     private void OnEnable()
     {
         endTurnButton.onClick.AddListener(EndTurn);
+        numberBar.inputField.onValueChanged.AddListener(delegate { SetTurn(numberBar.value); });
     }
 
     private void OnDisable()
     {
         endTurnButton.onClick.RemoveListener(EndTurn);
+        numberBar.inputField.onValueChanged.RemoveListener(delegate { SetTurn(numberBar.value); });
+    }
+
+    void SetTurn(int value)
+    {
+        turn = value;
     }
 
     private void EndTurn()
@@ -31,6 +38,6 @@ public class TurnManager : MonoBehaviour
 
     private void Update()
     {
-        turnText.text = "回合" + turn.ToString();
+        numberBar.SetValue(turn);
     }
 }

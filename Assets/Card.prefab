@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 7553944134989214850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.06, y: -2.87, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7553944134933753878}
@@ -132,14 +132,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d01e67fbcb485247b93a5f4d77c630a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   cardInfo:
     id: 0
     rank: 0
     cost: 0
     cardName: 
     description: 
+    actions: []
   title: {fileID: 7553944136769752462}
   description: {fileID: 7553944135192516613}
+  cardBehaviour: {fileID: 0}
 --- !u!61 &7302918345584896106
 BoxCollider2D:
   m_ObjectHideFlags: 0
