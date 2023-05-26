@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3be881b2b9ce36248a9060c545420a9e, type: 3}
-  m_Name: 5 HR2
+  m_Name: "21 \u8D76\u5DE5\u5F00\u53D1"
   m_EditorClassIdentifier: 
-  id: 5
+  id: 21
   rank: 1
-  cost: 1
-  cardName: "\u4E2D\u7EA7\u4EBA\u529B"
-  description: "\u5728\u968F\u673A\u76843\u5F20\u4E8C\u9636\u724C\u4E2D\u9009\u62E91\u5F20\u52A0\u5165\u624B\u724C\r"
+  cost: 0
+  cardName: "\u8D76\u5DE5\u5F00\u53D1"
+  description: "\u8FDB\u5EA6+1\uFF0C\u5728\u624B\u724C\u4E2D\u6DFB\u52A01\u5F20\u4E25\u91CDBUG\r"
   actions:
-  - {fileID: 11400000, guid: 3f10b03a4c5f528499997b915155cd11, type: 2}
+  - {fileID: 11400000, guid: b4290f15c4b855b4088051fbab43ca0d, type: 2}
+  - {fileID: 11400000, guid: 952c25d61698e0c4e8ec8d3cc6ead974, type: 2}

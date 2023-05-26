@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db15aa8957a5cf44b708071426c3930, type: 3}
   m_Name: AddBug
   m_EditorClassIdentifier: 
-  cardID: 17
+  cardData: {fileID: 11400000, guid: d4d3c72deea5e8649a2c0ccf32ee87f0, type: 2}

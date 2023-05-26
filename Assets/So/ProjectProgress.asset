@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 693d134c1c7b6a144aa6be538c02b3d8, type: 3}
   m_Name: ProjectProgress
   m_EditorClassIdentifier: 
-  Value: 79
+  <Value>k__BackingField: 0
+  handler: {fileID: 11400000, guid: 0ef48c7fc12218c45bb2b66d997724e5, type: 2}

@@ -9,12 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3be881b2b9ce36248a9060c545420a9e, type: 3}
-  m_Name: 18 CriticalBug
+  m_Script: {fileID: 11500000, guid: 3db15aa8957a5cf44b708071426c3930, type: 3}
+  m_Name: AddCriticalBug
   m_EditorClassIdentifier: 
-  id: 18
-  rank: 0
-  cost: 99
-  cardName: "\u4E25\u91CDBUG"
-  description: "\u8FD9\u4F1A\u4E25\u91CD\u5F71\u54CD\u9879\u76EE\u8FDB\u5EA6"
-  actions: []
+  cardData: {fileID: 11400000, guid: 521126ec40261a54999eaf6a0a2f8724, type: 2}

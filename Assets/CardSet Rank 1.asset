@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5221d812e9714d140a862dff33fc2e25, type: 3}
+  m_Name: CardSet Rank 1
+  m_EditorClassIdentifier: 
+  cards:
+  - cardData: {fileID: 11400000, guid: 4beceffc562c0424da7a610e1d8eed45, type: 2}
+    amount: 4
+  - cardData: {fileID: 11400000, guid: e71370b59f3a3fe47880c3da96cb28cb, type: 2}
+    amount: 4
+  - cardData: {fileID: 11400000, guid: 3684c86a74fca92408da9a3b741fc538, type: 2}
+    amount: 2
+  - cardData: {fileID: 11400000, guid: b233eac2c94b127468b6eca1d8a43817, type: 2}
+    amount: 1
+  - cardData: {fileID: 11400000, guid: fd2e35f66204ea246ac39b28a7d289e0, type: 2}
+    amount: 1
+  - cardData: {fileID: 11400000, guid: 628648ce7d6bfb84bb15553afd665597, type: 2}
+    amount: 2
+  - cardData: {fileID: 11400000, guid: 46430181e4234de48b00bf86fbde0c5c, type: 2}
+    amount: 4
+  - cardData: {fileID: 11400000, guid: da5923b4b1a50c447a7540dbd1e29afa, type: 2}
+    amount: 4
+  - cardData: {fileID: 11400000, guid: 21e6a3599b6f325419c3fa5a2fa45a54, type: 2}
+    amount: 4

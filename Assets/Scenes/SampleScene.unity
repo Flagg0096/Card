@@ -206,8 +206,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1603246538}
   m_HandleRect: {fileID: 1603246537}
   m_Direction: 0
-  m_Value: 1
-  m_Size: 1
+  m_Value: 0
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -889,7 +889,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deckManager: {fileID: 1604696280}
-  gameManager: {fileID: 1604696278}
 --- !u!1001 &112128474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1465,6 +1464,7 @@ MonoBehaviour:
   cardInfoSO: {fileID: 11400000, guid: bd363d349e08dc2458f058a5fc501d4e, type: 2}
   contentPrefab: {fileID: 4615601554631396592, guid: a79e8a2bfb67c894b97a37d35f8c7b57, type: 3}
   offset: {x: 5, y: -5}
+  allCards: []
 --- !u!114 &253149427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2390,7 +2390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 17.000048}
+  m_AnchoredPosition: {x: 0, y: 17.000011}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &636963247
@@ -2428,8 +2428,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 200}
-  m_SizeDelta: {x: 1100, y: 300}
+  m_AnchoredPosition: {x: 0, y: 300}
+  m_SizeDelta: {x: 1500, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &636963249
 MonoBehaviour:
@@ -3098,8 +3098,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 729158887}
   m_HandleRect: {fileID: 729158886}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.9999357
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3472,8 +3472,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 896746189}
   m_HandleRect: {fileID: 896746188}
   m_Direction: 2
-  m_Value: -0.0000017951485
-  m_Size: 0.9432403
+  m_Value: 0.0000017951548
+  m_Size: 0.94333345
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4234,7 +4234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00000071525574, y: -0.000018798159}
+  m_AnchoredPosition: {x: 0.00000071525574, y: -0.000016346827}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1402822449
@@ -5478,7 +5478,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1020546998}
   m_HandleRect: {fileID: 1020546997}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5660,12 +5660,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 582dfb931c3bd354487b1d9db3a270de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startDeck: {fileID: 11400000, guid: c4942bf5e36b71447ac29e32dad9fe44, type: 2}
   deck:
-    <cards>k__BackingField: 0100000001000000020000000300000004000000
+    <cards>k__BackingField: []
   hands:
-    <cards>k__BackingField: 
+    <cards>k__BackingField: []
   discard:
-    <cards>k__BackingField: 
+    <cards>k__BackingField: []
 --- !u!114 &1604696282
 MonoBehaviour:
   m_ObjectHideFlags: 0

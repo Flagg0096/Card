@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073b28aa16a1bed4b89f55143b5d0d00, type: 3}
   m_Name: RemoveHandBug
   m_EditorClassIdentifier: 
-  cardID: 17
+  cardData: {fileID: 11400000, guid: d4d3c72deea5e8649a2c0ccf32ee87f0, type: 2}

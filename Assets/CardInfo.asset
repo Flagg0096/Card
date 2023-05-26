@@ -78,7 +78,8 @@ MonoBehaviour:
     cost: 1
     cardName: "\u7ED3\u5BF9\u7F16\u7A0B "
     description: "\u4E0B\u4E00\u5F20\u724C\u7684\u8FDB\u5EA6x2\r"
-    actions: []
+    actions:
+    - {fileID: 11400000, guid: bc21ea0cbd3df7b45afbd44ab7eb40d3, type: 2}
   - id: 11
     rank: 2
     cost: 1
