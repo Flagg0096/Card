@@ -46,5 +46,6 @@ public class CardStack
     internal void RemoveCard(CardData cardData)
     {
         cards.Remove(cardData);
+        RaiseOnChange();
     }
 }

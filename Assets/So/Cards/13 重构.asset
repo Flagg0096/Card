@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 13
   rank: 3
   cost: 1
-  cardName: "\u9AD8\u7EA7\u4EBA\u529B"
+  cardName: "\u91CD\u6784"
   description: "\u4ECE\u5361\u7EC4\u3001\u5F03\u724C\u5806\u4E2D\u79FB\u96641\u5F20BUG\r"
   actions: []

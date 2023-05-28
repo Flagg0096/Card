@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DeckTurnEndBehaviour : MonoBehaviour
 {
-    public DeckManager deckManager;
+    GameManager gameManager;
+    DeckManager deckManager;
     private void OnEnable()
     {
         TurnManager.turnEndEvent += OnTurnEndEvent;
@@ -15,9 +16,15 @@ public class DeckTurnEndBehaviour : MonoBehaviour
         TurnManager.turnEndEvent -= OnTurnEndEvent;
     }
 
+    private void Start()
+    {
+        gameManager = FindAnyObjectByType<GameManager>();
+        deckManager = FindAnyObjectByType<DeckManager>();
+    }
+
     private void OnTurnEndEvent()
     {
         deckManager.DiscardHand();
-        StartCoroutine(deckManager.DrawHand());
+        StartCoroutine(deckManager.DrawCard(gameManager.drawAmount));
     }
 }

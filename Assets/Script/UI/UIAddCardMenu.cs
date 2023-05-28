@@ -8,12 +8,8 @@ using System.Linq;
 public class UIAddCardMenu : UIPopUpMenu
 {
     DeckManager deckManager;
-    public RectTransform contentTF;
     public CardInfoSO cardInfoSO;
-    public RectTransform contentPrefab;
-    public Vector2 offset;
-    List<GameObject> menuItem = new List<GameObject>();
-    public List<CardData> allCards;
+    List<CardData> cardDatas;
 
     // Start is called before the first frame update
     void Start()
@@ -22,45 +18,34 @@ public class UIAddCardMenu : UIPopUpMenu
         HideMenu();
     }
 
-    public void CreateMenu(List<CardData> cardDatas)
+    public void CreateMenu(List<CardData> cards)
     {
-        // for (int i = 0; i < transform.childCount; i++)
-        // {
-        //     Destroy(transform.GetChild(i).gameObject);
-        // }
+        cardDatas = cards;
 
-        foreach (var item in menuItem)
-        {
-            Destroy(item);
-        }
-        menuItem.Clear();
+        int amount = cardDatas.Count;
 
-        foreach (var cardInfo in cardDatas)
-        {
-            AddMenuItem(cardInfo);
-        }
-
-        contentTF.sizeDelta = new Vector2(contentPrefab.sizeDelta.x, contentPrefab.sizeDelta.y * cardDatas.Count);
+        CreateMenu(amount);
+        UpdateMenuItem(amount);
     }
 
-    private void AddMenuItem(CardData cardData)
+    private void UpdateMenuItem(int menuItemAmount)
     {
-        Vector2 position = offset + contentPrefab.sizeDelta.y * menuItem.Count * Vector2.down;
-        GameObject addCardButton = Instantiate(contentPrefab.gameObject, contentTF.TransformPoint(position), Quaternion.identity, contentTF);
-        menuItem.Add(addCardButton);
+        for (int i = 0; i < menuItemAmount; i++)
+        {
+            CardData cardData = cardDatas[i];
+            Button button = menuItem[i].GetComponent<Button>();
+            button.onClick.AddListener(() => deckManager.AddCardtoHand(cardData));
+            button.onClick.AddListener(HideMenu);
 
-        Button button = addCardButton.GetComponent<Button>();
-        button.onClick.AddListener(() => deckManager.AddCardtoHand(cardData));
-        button.onClick.AddListener(HideMenu);
-
-        TextMeshProUGUI text = button.GetComponentInChildren<TextMeshProUGUI>();
-        text.text = cardData.cardName + "：" + cardData.description;
+            TextMeshProUGUI text = button.GetComponentInChildren<TextMeshProUGUI>();
+            text.text = cardData.cardName + "：" + cardData.description;
+        }
     }
 
     public void OpenAddCardMenu()
     {
         ShowMenu();
-        CreateMenu(allCards);
+        CreateMenu(cardDatas);
     }
 
     public void Random3AmongRankMenu(int rank)
@@ -69,7 +54,7 @@ public class UIAddCardMenu : UIPopUpMenu
         List<CardInfo> cardInfos = cardInfoSO.cardInfos.FindAll(card => card.rank == rank);
         cardInfos = cardInfos.OrderBy(x => Random.value).ToList();
 
-        CreateMenu(allCards);
+        CreateMenu(cardDatas);
     }
 
     public void AddCardFrom(List<CardData> cardDatas)

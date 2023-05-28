@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ProgressDoubleBuff", menuName = "CardAction/ProgressDoubleBuff", order = 0)]
+[CreateAssetMenu(menuName = "Card Action/Add Progress Double Buff")]
 public class ProgressDoubleBuff : CardAction
 {
     public ProjectProgressHandler progressHandler;

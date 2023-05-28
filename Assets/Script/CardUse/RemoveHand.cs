@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Remove Hand Card", menuName = "CardAction/Remove Hand Card", order = 0)]
+[CreateAssetMenu(menuName = "Card Action/Remove Hand Card")]
 public class RemoveHand : CardAction
 {
     public CardData cardData;

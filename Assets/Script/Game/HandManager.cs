@@ -57,9 +57,9 @@ public class HandManager : MonoBehaviour
         cardBehaviour.costManager = FindAnyObjectByType<CostManager>();
     }
 
-    public void DiscardHand(int index)
+    public void DiscardHand(CardData cardData)
     {
-        deckManager.DiscardHand(index);
+        deckManager.DiscardHand(cardData);
     }
 
     public void RemoveCard()

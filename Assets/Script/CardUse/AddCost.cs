@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Add Cost", menuName = "CardAction/Add Cost", order = 0)]
+[CreateAssetMenu(menuName = "Card Action/Add Cost")]
 public class AddCost : CardAction
 {
     public int value;

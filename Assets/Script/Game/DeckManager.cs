@@ -23,11 +23,11 @@ public class DeckManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager=FindAnyObjectByType<GameManager>();
-        
+        gameManager = FindAnyObjectByType<GameManager>();
+
         deck.AddCard(startDeck.GetList());
         ShuffleDeck();
-        StartCoroutine(DrawHand());
+        StartCoroutine(DrawCard(gameManager.drawAmount));
     }
 
     public void RefillDeck()
@@ -43,11 +43,11 @@ public class DeckManager : MonoBehaviour
 
         HandsChanged();
     }
-    public void DiscardHand(int index)
+    public void DiscardHand(CardData cardData)
     {
-        Debug.Log(index);
-        discard.AddCard(hands.cards[index]);
-        hands.RemoveCardAt(index);
+        // Debug.Log(index);
+        discard.AddCard(cardData);
+        hands.RemoveCard(cardData);
 
         HandsChanged();
     }
@@ -58,9 +58,9 @@ public class DeckManager : MonoBehaviour
             onHandsChange.Invoke();
     }
 
-    public IEnumerator DrawHand()
+    public IEnumerator DrawCard(int amount)
     {
-        for (int i = 0; i < gameManager.drawAmount; i++)
+        for (int i = 0; i < amount; i++)
         {
             DrawCard();
             yield return new WaitForSeconds(0.1f);

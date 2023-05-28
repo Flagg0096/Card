@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "CardAction/Add 1 From N")]
+[CreateAssetMenu(menuName = "Card Action/Add 1 Card From N")]
 public class Add1CardFromNCard : CardAction
 {
     public int N = 3;
@@ -13,7 +13,7 @@ public class Add1CardFromNCard : CardAction
     {
         pool = new List<CardData>();
         result = new List<CardData>();
-        
+
         pool.AddRange(cardSet.GetList());
 
         for (int i = 0; i < N; i++)

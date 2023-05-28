@@ -34,7 +34,7 @@ public class UICard : MonoBehaviour
         }
 
         cardBehaviour.Use();
-        handManager.DiscardHand(index);
+        handManager.DiscardHand(cardData);
     }
 
     public void UpdateCard()

@@ -6,12 +6,7 @@ using TMPro;
 
 public class UIStackEditMenu : UIPopUpMenu
 {
-    public CardInfoSO cardInfoSO;
     CardStack cardStack;
-    public Vector2 offset;
-    public RectTransform contentPrefab;
-    public RectTransform contentTF;
-    List<GameObject> menuItem = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -21,49 +16,41 @@ public class UIStackEditMenu : UIPopUpMenu
     public void OpenMenu(CardStack cardStack)
     {
         if (cardStack != null)
-            cardStack.onChange -= UpdateMenu;
+            cardStack.onChange -= RefreshMenu;
 
         this.cardStack = cardStack;
 
+        RefreshMenu();
         ShowMenu();
-        UpdateMenu();
 
-        cardStack.onChange += UpdateMenu;
+        cardStack.onChange += RefreshMenu;
     }
 
-    private void UpdateMenu()
+    private void RefreshMenu()
     {
-        ClearMenuItem();
+        int amount = cardStack.cards.Count;
 
-        foreach (var card in cardStack.cards)
+        CreateMenu(amount);
+        UpdateMenuItem(amount);
+    }
+
+    private void UpdateMenuItem(int menuItemAmount)
+    {
+
+        for (int i = 0; i < menuItemAmount; i++)
         {
-            CreateMenuItem(card);
+            CardData cardData = cardStack.cards[i];
+            Button button = menuItem[i].GetComponent<Button>();
+            button.onClick.AddListener(() => RemoveCard(cardData));
+
+            TextMeshProUGUI text = button.GetComponentInChildren<TextMeshProUGUI>();
+            text.text = cardData.cardName + "：" + cardData.description;
         }
     }
-
-    private void CreateMenuItem(CardData cardData)
+    void RemoveCard(CardData cardData)
     {
-        Vector2 position = offset + contentPrefab.sizeDelta.y * menuItem.Count * Vector2.down;
-        GameObject addCardButton = Instantiate(contentPrefab.gameObject, contentTF.TransformPoint(position), Quaternion.identity, contentTF);
-
-        Button button = addCardButton.GetComponent<Button>();
-        button.onClick.AddListener(() => RemoveCardAt(menuItem.IndexOf(addCardButton)));
-
-        TextMeshProUGUI text = button.GetComponentInChildren<TextMeshProUGUI>();
-        text.text = cardData.cardName + "：" + cardData.description;
-
-        menuItem.Add(addCardButton);
+        cardStack.RemoveCard(cardData);
     }
-
-    private void ClearMenuItem()
-    {
-        foreach (var item in menuItem)
-        {
-            Destroy(item);
-        }
-        menuItem.Clear();
-    }
-
     public void RemoveCardAt(int index)
     {
         Debug.Log(index);

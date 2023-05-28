@@ -15,11 +15,14 @@ public class Deck : MonoBehaviour
         deckManager = FindAnyObjectByType<DeckManager>();
         cardStack = deckManager.deck;
     }
+    private void Update()
+    {
+        text.text = "卡组\n" + cardStack.cards.Count.ToString();
+    }
 
     public void DrawCard()
     {
         deckManager.DrawCard();
-        text.text = "卡组\n" + cardStack.cards.Count.ToString();
     }
 
     public void Shuffle()

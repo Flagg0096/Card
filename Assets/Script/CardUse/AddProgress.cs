@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "AddProgress", menuName = "CardAction/AddProgress", order = 0)]
+[CreateAssetMenu(menuName = "Card Action/Add Progress")]
 public class AddProgress : CardAction
 {
     public ProjectProgress projectProgress;
